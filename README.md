@@ -40,7 +40,7 @@ Os nomes, proporções e o enquadramento esperado de cada um estão em
 ## Estrutura
 
 ```
-index.html    → as 8 dobras
+index.html    → as 8 dobras + a esteira de fotos
 styles.css    → tokens de marca e de tema, componentes, responsivo
 script.js     → tema claro/escuro, menu, revelação no scroll, brilho do cursor
 assets/       → fotos (ver README de lá)

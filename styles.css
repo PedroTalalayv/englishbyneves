@@ -223,6 +223,12 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 [data-slot="sobre-detalhe"]       { --src:url("assets/sobre-detalhe.jpg"); }
 [data-slot="experiencia-londres"] { --src:url("assets/experiencia-londres.jpg"); }
 [data-slot="final-ester"]         { --src:url("assets/final-ester.jpg"); }
+[data-slot="insta-1"]{ --src:url("assets/insta-1.jpg"); }
+[data-slot="insta-2"]{ --src:url("assets/insta-2.jpg"); }
+[data-slot="insta-3"]{ --src:url("assets/insta-3.jpg"); }
+[data-slot="insta-4"]{ --src:url("assets/insta-4.jpg"); }
+[data-slot="insta-5"]{ --src:url("assets/insta-5.jpg"); }
+[data-slot="insta-6"]{ --src:url("assets/insta-6.jpg"); }
 
 /* ═══════════════ O BALÃO ═══════════════
    Corpo com raio grande + rabinho: um quadrado girado 45°
@@ -392,7 +398,7 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   .hero{ grid-template-columns:1fr; padding-top:clamp(6.5rem,15vh,8.5rem); }
   .hero__glifo{ left:auto; right:0; top:clamp(3rem,7vh,5rem); }
     .hero__visual{ margin-top:3.2rem; }
-  .carimbo{ left:auto; right:-.6rem; top:-1.8rem; }
+  .carimbo{ left:auto; right:.6rem; top:-1.8rem; }  /* o anel tracejado precisa caber */
 }
 
 /* ═══════════════ FAIXA ═══════════════ */
@@ -625,6 +631,53 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
 }
 @media (max-width:900px){ .depos{ grid-template-columns:1fr; } .depo--meio{ margin-top:0; } }
 
+/* ── esteira de fotos ──
+   Sangra a largura toda de propósito: é o respiro de vida real
+   entre a prova social e o convite final.                       */
+.tira{
+  position:relative; z-index:1;
+  padding:var(--ritmo) 0;
+  overflow:hidden;
+}
+.tira__topo{
+  display:flex; flex-wrap:wrap; gap:1.5rem 2rem;
+  align-items:end; justify-content:space-between;
+  max-width:calc(var(--maxw) + var(--pad) * 2);
+  margin:0 auto clamp(2.5rem,5vw,3.5rem);
+  padding-inline:var(--pad);
+}
+.tira__h{
+  font-family:var(--f-display); font-weight:700;
+  font-size:clamp(1.9rem,3.6vw,3.2rem); line-height:1.02; letter-spacing:-.035em;
+}
+.tira__h em{
+  font-family:var(--f-fantasia); font-style:italic; font-weight:600;
+  font-variation-settings:"SOFT" 40,"WONK" 1,"opsz" 144;
+  color:var(--acento);
+}
+.tira__esteira{ overflow:hidden; }
+.tira__trilho{
+  display:flex; width:max-content;
+  animation:esteira 58s linear infinite;
+}
+.tira__esteira:hover .tira__trilho{ animation-play-state:paused; }
+@keyframes esteira{ to{ transform:translateX(-50%); } }
+
+.polaroid{
+  flex:none; margin-inline:clamp(.5rem,1vw,.85rem);
+  width:clamp(190px,19vw,272px); aspect-ratio:4/5;
+  position:relative; overflow:hidden;
+  background:var(--nata);
+  border:2px solid var(--tinta); border-radius:1.5rem;
+  transform:rotate(var(--giro,0deg));
+  box-shadow:10px 12px 0 var(--c, var(--ceu));
+  transition:transform .4s var(--curva);
+}
+.polaroid:hover{ transform:rotate(0deg) scale(1.03); }
+.polaroid .foto{ inset:.55rem; border-radius:1.05rem; overflow:hidden; }
+
+@media (max-width:640px){ .polaroid{ width:clamp(160px,52vw,210px); } }
+
 /* ── 08 · começar ── */
 .comecar{
   position:relative; z-index:1;
@@ -708,6 +761,8 @@ button{ font:inherit; color:inherit; background:none; border:0; cursor:pointer; 
   }
   [data-reveal]{ opacity:1; transform:none; }
   .bolha[data-reveal], .carta[data-reveal]{ transform:rotate(var(--giro,0deg)); }
-  .faixa__trilho, .carimbo__anel, .orbita__anel, .faisca{ animation:none; }
+  .faixa__trilho, .carimbo__anel, .orbita__anel, .faisca, .tira__trilho{ animation:none; }
+  .tira__esteira{ overflow-x:auto; }
+  .tira__trilho{ width:auto; }
   .brilho{ display:none; }
 }
