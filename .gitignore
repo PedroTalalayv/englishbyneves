@@ -1,0 +1,14 @@
+# arquivos de trabalho gerados durante o design
+_preview.html
+_probe.html
+_mobile.html
+*.tmp
+
+# sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# dependências (o projeto não usa, mas evita acidente)
+node_modules/
+.vercel
