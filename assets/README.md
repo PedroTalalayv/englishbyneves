@@ -11,7 +11,6 @@ existir, aparece o duotone azul da marca (não quebra o layout).
 | `sobre-detalhe.jpg`        | 04    | 3:4       | Foto pequena de apoio: caderno, café, viagem, bastidor      |
 | `experiencia-londres.jpg`  | 06    | 16:9      | Foto larga e forte de Londres/viagem — vira fundo full-bleed |
 | `final-ester.jpg`          | 08    | 4:5       | Retrato de encerramento, expressão aberta                   |
-| `insta-1.jpg` … `insta-6.jpg` | esteira | 4:5    | Seis fotos do Instagram para a esteira "A vida que cabe no inglês" — viagem, cotidiano, Londres, bastidor. São as que dão volume de vida real à página |
 
 **Recomendações**
 - JPG, ~2000px no lado maior, qualidade 80.
@@ -22,12 +21,3 @@ existir, aparece o duotone azul da marca (não quebra o layout).
   evite fotos com informação importante no canto inferior esquerdo.
 - A dobra 06 recebe um véu azul-marinho por cima: escolha uma foto com área respirada à
   esquerda, onde entra o título.
-
-**Sobre a esteira (`insta-1` a `insta-6`)**
-- São as fotos mais fáceis de conseguir: servem recortes do feed dela.
-- Variedade importa mais que qualidade individual — misture retrato, lugar, detalhe e
-  cotidiano. É o trecho da página que mostra a vida por trás das aulas.
-- Cada uma é exibida em 4:5 dentro de uma moldura clara. Fotos quadradas do Instagram
-  funcionam: o corte tira um pouco de cima e de baixo.
-- Se você tiver menos de seis, repita as melhores em posições distantes — a esteira roda
-  em loop e ninguém percebe.
